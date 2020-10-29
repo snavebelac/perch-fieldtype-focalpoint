@@ -42,7 +42,7 @@ class PerchFieldType_focalpoint extends PerchFieldType
     {
         $item = $raw;
 
-        if ($this->Tag->output() && $this->output() == 'background-position') {
+        if ($this->Tag->output() && $this->Tag->output() == 'background-position') {
             $coords = explode(',', $item);
             if (is_array($coords)) {
                 list($left, $top) = $this->get_percentages($coords);
