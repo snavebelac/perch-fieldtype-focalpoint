@@ -1,0 +1,84 @@
+.fi-grid {
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    grid-template-rows: 6fr 3fr 2fr;
+    grid-gap: 5px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* needed for safari */
+    height: 100vh;
+    width: 100vw;
+
+    z-index:50;
+    background-color:black;
+    padding:5px;
+    img {
+        max-width:unset;
+        height:unset;
+    }
+}
+
+.fi-top-left {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.fi-top-center {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.fi-top-right {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.fi-center-left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.fi-center-center {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.fi-center-right {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.fi-bottom-left {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.fi-bottom-center {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.fi-bottom-right {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.fi-picker-controls {
+    position:fixed;
+    z-index:60;
+    top:20px;
+    left:20px;
+    padding:15px;
+    width:300px;
+    background-color:white;
+    box-shadow: 0px 1px 13px 2px rgba(0,0,0,.5);
+    img {
+        max-width: 100%;
+    }
+    button {
+        margin-top:10px;
+    }
+}
