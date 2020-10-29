@@ -42,26 +42,12 @@ class PerchFieldType_focalpoint extends PerchFieldType
     {
         $item = $raw;
 
-        if ($this->Tag->output()) {
-            switch ($this->Tag->output()) {
-                case 'background-position':
-                {
-                    $coords = explode(',', $item);
-                    if (is_array($coords)) {
-                        list($left, $top) = $this->get_percentages($coords);
+        if ($this->Tag->output() && $this->output() == 'background-position') {
+            $coords = explode(',', $item);
+            if (is_array($coords)) {
+                list($left, $top) = $this->get_percentages($coords);
 
-                        return "background-position: $left% $top%;";
-                    }
-                }
-                case 'absolute': // Not sure how much use this is.  To be useful, The container size would be required
-                {
-                    $coords = explode(',', $item);
-                    if (is_array($coords)) {
-                        list($left, $top) = $this->get_percentages($coords);
-
-                        return "left: $left%; top: $top%;";
-                    }
-                }
+                return "background-position: $left% $top%;";
             }
         }
 
